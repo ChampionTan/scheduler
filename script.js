@@ -22,6 +22,10 @@ $(function timeColor() {
     })
   
 
-  
+  $(saveButton).click(function() {
+    var textInput = $(this).siblings('.description').val();
+    var time = $(this).parent().attr('id').split('-')[1];
+    localStorage.setItem(textInput, time);
+  })
   
 })
